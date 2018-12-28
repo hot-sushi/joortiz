@@ -14,6 +14,7 @@ import {
   Segment,
 } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
+import gmboi from './gmboi.png'
 
 const threm = { paddingTop: '3rem' }
 
@@ -48,10 +49,10 @@ const Navigation = () => (
     <Menu fixed='top' inverted>
       <Container>
         <Menu.Item header>
-          <Image size='mini' src='/logo.png' style={{ marginRight: '1.5em' }} />
+          <Image size='mini' src={gmboi} style={{ marginRight: '1.5em' }} />
           Jonathan Ortiz
         </Menu.Item>
-        <Menu.Item><Link to="/">Home</Link></Menu.Item>
+        <Menu.Item><Link to="/joortiz">Home</Link></Menu.Item>
         <Menu.Item><Link to="/about">About</Link></Menu.Item>
         <Menu.Item><Link to="/topics">Topics</Link></Menu.Item>
       </Container>
