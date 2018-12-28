@@ -56,7 +56,7 @@ const Navigation = () => (
         <Menu.Item><Link to="/topics">Topics</Link></Menu.Item>
       </Container>
     </Menu>
-    <Route exact path="/" component={Home} />
+    <Route exact path="/joortiz" component={Home} />
     <Route path="/about" component={About} />
     <Route path="/topics" component={Topics} />
     </div>
