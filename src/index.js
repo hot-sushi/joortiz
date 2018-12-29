@@ -2,30 +2,22 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { render } from 'react-dom';
-import {
-  Container,
-  Divider,
-  Dropdown,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Segment,
-} from 'semantic-ui-react'
+import { Button,Container,Divider,Dropdown,Grid,Header,Icon,Image,List,Menu,Segment, } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import gmboi from './gmboi.png'
 
-const threm = { marginTop: '4.88rem' }
-
+const threm = { paddingTop: '4.88rem', backgroundColor:'#fff', minHeight:'330px' }
+const jrton = { paddingTop: '4.88rem', backgroundColor:'#1A1C1D', minHeight:'440px', color: '#fff' }
 const Home = () => {
     return(
-        <div style={threm}>
-            <Grid container columns={12}>
+        <div style={jrton}>
+            <Grid>
                 <Grid.Row>
                     <Grid.Column>
-                        <h1>Home</h1>
+                        <Container textAlign='center' style={{ marginTop:'6.55rem', }}>
+                            <h1>Make it an</h1>
+                            <Button content='Experience' size='massive'icon='long arrow alternate right' labelPosition='right' inverted color='green'/>
+                        </Container>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -65,9 +57,9 @@ const Topics = () => {
     )
 }
 
-const Navigation = () => (
+const Dashboard = () => (
     <div>
-        <Menu fixed='top' inverted>
+        <Menu fixed='top' inverted size='mini'>
             <Container>
                 <Menu.Item header>
                 <Image size='mini' src={gmboi} style={{margin:'0 1.4rem .333rem 0'}}/>
@@ -91,13 +83,11 @@ class App extends Component {
     render () {
         return(
                 <Router>
-                    <Navigation />
+                    <Dashboard />
                 </Router>
         )
     }
 }
 
 
-
-render( <App />
-    , document.querySelector('#root'));
+render(<App />, document.querySelector('#root'));
